@@ -4,8 +4,11 @@ import Typography from '@material-ui/core/Typography';
 
 import { useStyles } from './style';
 
-import Header from './components/header.component';
-import DrawerDispSwitch from './components/drawer-disp-switch';
+import Header from './header/header.component';
+import DrawerDispSwitch from './drawer/drawer-disp-switch';
+
+import './index.scss';
+import MaterialHeader from './material-header/material-header';
 
 export default function ResponsiveDrawer() {
   const classes = useStyles();
@@ -25,6 +28,7 @@ export default function ResponsiveDrawer() {
       />
       <main className={classes.content}>
         <div className={classes.toolbar} />
+        <MaterialHeader />
         <Typography paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.

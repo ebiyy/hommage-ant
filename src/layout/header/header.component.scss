@@ -1,0 +1,28 @@
+#buy-number {
+  width: 65px;
+  margin-right: 8px;
+  label {
+    color: white;
+    font-weight: bold;
+  }
+  label + .MuiInput-formControl {
+    margin-top: 17px;
+  }
+  input {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 17px;
+  }
+  .MuiInputBase-input {
+    padding: 6px 0 0;
+  }
+  .MuiInput-underline {
+    &:before {
+      border-bottom: 1px solid white;
+    }
+    &:after {
+      border-bottom: 2px solid white;
+    }
+  }
+}

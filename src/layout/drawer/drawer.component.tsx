@@ -4,7 +4,7 @@ import { Divider, List, ListSubheader } from '@material-ui/core';
 import { useStyles } from '../style';
 
 import './collapse-list.scss';
-import { DRAWER_LIST } from '../drawer-list.constant';
+import { DRAWER_LIST } from './drawer-list.constant';
 import CollapseList from './collapse-list';
 
 const DrawerList: React.FC = () => {
@@ -19,7 +19,7 @@ const DrawerList: React.FC = () => {
         aria-labelledby="nested-list-subheader"
         subheader={
           <ListSubheader component="div" id="nested-list-subheader">
-            Nested List Items
+            Item List
           </ListSubheader>
         }
         className={classes.listRoot}

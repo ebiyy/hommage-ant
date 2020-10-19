@@ -25,6 +25,14 @@ export const useStyles = makeStyles((theme: Theme) =>
         display: 'none',
       },
     },
+    materialHeader: {
+      padding: 0,
+      marginLeft: -theme.spacing(3),
+      marginTop: -theme.spacing(3),
+      background: 'white',
+      width: '106%',
+      borderCollapse: 'collapse',
+    },
     // necessary for content to be below app bar
     toolbar: theme.mixins.toolbar,
     drawerPaper: {

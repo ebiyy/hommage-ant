@@ -1,5 +1,5 @@
 import './App.scss';
-import ResponsiveDrawer from './layout/drawer';
+import ResponsiveDrawer from './layout';
 
 function App() {
   return ResponsiveDrawer();
