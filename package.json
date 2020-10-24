@@ -16,6 +16,7 @@
     "material-ui-nested-menu-item": "^1.0.2",
     "node-sass": "^4.14.1",
     "react": "^16.14.0",
+    "react-app-rewired": "^2.1.6",
     "react-dom": "^16.14.0",
     "react-icons": "^3.11.0",
     "react-router-dom": "^5.2.0",
@@ -26,7 +27,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "rewired-start": "react-app-rewired start"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -46,7 +48,8 @@
   "devDependencies": {
     "husky": "^4.2.3",
     "lint-staged": "^10.0.7",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "tsconfig-paths-webpack-plugin": "^3.3.0"
   },
   "lint-staged": {
     "*.{ts,tsx}": [

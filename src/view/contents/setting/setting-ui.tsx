@@ -1,6 +1,6 @@
 import React from 'react';
-import RadioTypeOption from '../../../components/radio-type-option';
-import SelectTypeOption from '../../../components/select-type-option';
+import RadioTypeOption from '@components/radio-type-option';
+import SelectTypeOption from '@components/select-type-option';
 
 import './setting-ui.scss';
 
