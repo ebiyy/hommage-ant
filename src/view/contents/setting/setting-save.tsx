@@ -11,32 +11,30 @@ const SettingSave: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="setting-save">
       <h1>Save</h1>
       <p>
         Game autosaves every 3 minutes. You can also maually save, load and
         export savegames. Saves are stored in localstorage.
-      </p>
-      <p>
+        <br />
         <b>Clear button deletes everything !</b>
       </p>
+
       <div className="button-group">
-        <Button variant="contained" color="primary">
+        <Button variant="contained" size="large">
           SAVE
         </Button>
-        <Button variant="contained" color="secondary">
+        <Button variant="contained" size="large">
           LOAD
         </Button>
-        <Button variant="contained">CLEAR</Button>
+        <Button variant="contained" size="large">
+          CLEAR
+        </Button>
       </div>
 
-      <div>Export / Import Save</div>
+      <h3>Export / Import Save</h3>
       <div>Save</div>
-      <TextareaAutosize
-        aria-label="minimum height"
-        rowsMin={3}
-        placeholder="Minimum 3 rows"
-      />
+      <TextareaAutosize aria-label="minimum height" rowsMin={4} />
       <div className="button-group">
         <Button variant="contained" color="primary">
           EXPORT

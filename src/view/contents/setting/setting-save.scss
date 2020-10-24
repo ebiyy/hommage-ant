@@ -1,5 +1,31 @@
-.button-group {
-  &  > * {
-    margin: 1em !important;
+
+
+.setting-save {
+  .button-group {
+    margin-bottom: 3.5rem;
+    &  > * {
+      margin-right: 1em !important;
+    }
+    button {
+      color: white;
+      font-size: 1.25rem;
+      padding: .5em 1.25em;
+      &:first-child.MuiButton-contained {
+        background-color: #318700;
+      }
+      &:nth-child(2).MuiButton-contained {
+        background-color: #007cbb;
+      }
+      &:nth-child(3).MuiButton-contained {
+        background-color: #e62700;
+      }
+    }
+  
+  }
+
+  textarea {
+    margin-bottom: .5rem;
+    width: 100%;
+    border-radius: .25rem;
   }
 }

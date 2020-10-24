@@ -42,6 +42,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
       padding: theme.spacing(3),
       marginLeft: drawerWidth,
+      fontSize: '1.25rem',
     },
     listRoot: {
       width: '100%',

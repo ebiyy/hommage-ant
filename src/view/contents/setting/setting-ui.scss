@@ -1,8 +1,13 @@
 .setting-ui-options .option-list {
+  font-size: 1.25rem;
+  margin-top: 2rem;
   & > div {
     display: flex;
-    justify-content:space-between;
-    width: 400px;
-    font-size: 1.5rem;
+    justify-content: space-between;
+    width: 450px;
+    margin-bottom: 2rem;
+  }
+  .MuiInputBase-root {
+    font-size: 1.25rem;
   }
 }
