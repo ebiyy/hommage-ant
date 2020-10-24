@@ -1,8 +1,12 @@
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import './App.scss';
-import ResponsiveDrawer from './layout';
+import Layout from './layout';
 
-function App() {
-  return ResponsiveDrawer();
-}
+const App: React.FC = () => (
+  <BrowserRouter>
+    <Layout />
+  </BrowserRouter>
+);
 
 export default App;

@@ -1,17 +1,15 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import { useStyles } from './style';
 
-import Header from './header/header.component';
-import DrawerDispSwitch from './drawer/drawer-disp-switch';
+import Header from '../view/header/header.component';
+import DrawerDispSwitch from '../view/drawer/drawer-disp-switch';
 
 import './index.scss';
-import MaterialHeader, {
-  MATERIAL_DATA,
-} from './material-header/material-header';
-import ItemDescription from './item-description/item-description';
+import MaterialHeader from '../view/material-header/material-header';
+import SettingRouting from '../routes/setting-routes';
+import ItemDescriptionRouting from '../routes/item-description-routes';
 
-export default function ResponsiveDrawer() {
+const Layout: React.FC = () => {
   const classes = useStyles();
 
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -29,18 +27,12 @@ export default function ResponsiveDrawer() {
       />
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        {/* <MaterialHeader /> */}
-        <BrowserRouter>
-          <MaterialHeader />
-          <Switch>
-            {MATERIAL_DATA.map((data, index) => (
-              <Route path={`/${data.materialName.toLowerCase()}`} key={index}>
-                <ItemDescription materialName={data.materialName} />
-              </Route>
-            ))}
-          </Switch>
-        </BrowserRouter>
+        <MaterialHeader />
+        <ItemDescriptionRouting />
+        <SettingRouting />
       </main>
     </div>
   );
-}
+};
+
+export default Layout;

@@ -46,7 +46,7 @@ const MaterialHeader: React.FC = () => {
     <div className="material-header">
       {MATERIAL_DATA.map((data, index) => (
         <Link
-          to={data.materialName.toLowerCase()}
+          to={`/${data.materialName.toLowerCase()}`}
           className="material-item"
           key={index}
         >

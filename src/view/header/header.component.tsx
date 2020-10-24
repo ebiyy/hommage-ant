@@ -9,9 +9,11 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import { ImLab } from 'react-icons/im';
 
 import { makeStyles, Theme, createStyles } from '@material-ui/core';
-import BulkPurchase from './bulk-purchase';
+import BulkPurchase from '../../components/bulk-purchase';
 
 import './header.component.scss';
+import { Link } from 'react-router-dom';
+import { ROUTING_PATH } from '../../routes/routes';
 
 const drawerWidth = 240;
 
@@ -82,9 +84,11 @@ const Header: React.FC<Props> = props => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Idle Ant
-          </Typography>
+          <Link to="/">
+            <Typography variant="h6" noWrap>
+              Idle Ant
+            </Typography>
+          </Link>
           <IconButton
             aria-label="pause button"
             color="inherit"
@@ -107,16 +111,18 @@ const Header: React.FC<Props> = props => {
             <IconButton aria-label="pause button" color="inherit">
               <PauseIcon />
             </IconButton>
-            <IconButton
-              edge="end"
-              aria-label="setting button"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <SettingsIcon />
-            </IconButton>
+            <Link to={ROUTING_PATH.setting}>
+              <IconButton
+                edge="end"
+                aria-label="setting button"
+                aria-controls={menuId}
+                aria-haspopup="true"
+                onClick={handleProfileMenuOpen}
+                color="inherit"
+              >
+                <SettingsIcon />
+              </IconButton>
+            </Link>
           </div>
           <div className={classes.sectionMobile}>
             <IconButton

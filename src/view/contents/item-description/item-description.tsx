@@ -1,16 +1,5 @@
-import classes from '*.module.css';
-import {
-  TableContainer,
-  Paper,
-  Table,
-  TableHead,
-  TableRow,
-  TableCell,
-  TableBody,
-  makeStyles,
-} from '@material-ui/core';
-import Slider from '@material-ui/core/Slider/Slider';
 import React, { useEffect, useState } from 'react';
+import ProduceDescription from './produce-discription';
 
 import './item-description.scss';
 
@@ -60,21 +49,12 @@ const MOCKS = [
   },
 ];
 
-const rows = [
-  {
-    product: 'Food',
-    one: 2,
-    all: '95,9M',
-  },
-];
-
 type Props = {
   materialName: string;
 };
 
 const ItemDescription: React.FC<Props> = props => {
   const [descriptionData, setDescriptionData] = useState<mock>();
-  const [value, setValue] = React.useState<number>(30);
 
   useEffect(() => {
     console.log(props.materialName);
@@ -82,10 +62,6 @@ const ItemDescription: React.FC<Props> = props => {
       MOCKS.filter(data => props.materialName === data.materialName)[0],
     );
   }, [props.materialName]);
-
-  const handleChange = (event: any, newValue: number | number[]) => {
-    setValue(newValue as number);
-  };
 
   return (
     <>
@@ -96,43 +72,7 @@ const ItemDescription: React.FC<Props> = props => {
             <div>{descriptionData.possessionNumber}</div>
           </div>
           {descriptionData.materialName === 'Fungus' ? (
-            <>
-              <div>
-                Fungus is a source of food.
-                <br />
-                <Slider
-                  value={value}
-                  onChange={handleChange}
-                  aria-labelledby="continuous-slider"
-                  style={{ width: '500px' }}
-                />
-                <br />
-                {value} % operative
-              </div>
-              <div className="discription-table-title"> Fungus produces:</div>
-              <TableContainer className="discription-table" component={Paper}>
-                <Table aria-label="simple table">
-                  <TableHead>
-                    <TableRow>
-                      <TableCell align="center">Product</TableCell>
-                      <TableCell align="center">One</TableCell>
-                      <TableCell align="center">All</TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    {rows.map((row, index) => (
-                      <TableRow key={index}>
-                        <TableCell component="th" scope="row" align="center">
-                          {row.product}
-                        </TableCell>
-                        <TableCell align="center">{row.one}</TableCell>
-                        <TableCell align="center">{row.all}</TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            </>
+            <ProduceDescription />
           ) : (
             <p>{descriptionData.description}</p>
           )}

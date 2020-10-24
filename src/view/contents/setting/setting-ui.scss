@@ -1,0 +1,8 @@
+.setting-ui-options .option-list {
+  & > div {
+    display: flex;
+    justify-content:space-between;
+    width: 400px;
+    font-size: 1.5rem;
+  }
+}

@@ -7,7 +7,7 @@ import { ExpandLess, ExpandMore } from '@material-ui/icons';
 import { SvgIconTypeMap, ListItemIcon, ListItemText } from '@material-ui/core';
 import { OverridableComponent } from '@material-ui/core/OverridableComponent';
 
-import { useStyles } from '../style';
+import { useStyles } from '../layout/style';
 import { IconType } from 'react-icons/lib/esm/iconBase';
 
 import './collapse-list.scss';
