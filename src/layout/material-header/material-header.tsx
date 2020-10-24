@@ -1,7 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './material-header.scss';
 
-const MATERIAL_DATA = [
+export interface MaterialData {
+  materialName: string;
+  possessionNumber: string;
+  possessionNumberPerSec: string;
+}
+
+export const MATERIAL_DATA = [
   {
     materialName: 'Food',
     possessionNumber: '20Qa',
@@ -38,13 +45,17 @@ const MaterialHeader: React.FC = () => {
   return (
     <div className="material-header">
       {MATERIAL_DATA.map((data, index) => (
-        <div className="material-item" key={index}>
+        <Link
+          to={data.materialName.toLowerCase()}
+          className="material-item"
+          key={index}
+        >
           <div>{data.materialName}</div>
           <div className="material-item-value">
             <div>{data.possessionNumber}</div>
             <div>{data.possessionNumberPerSec}</div>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );

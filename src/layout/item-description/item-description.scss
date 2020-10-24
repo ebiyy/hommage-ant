@@ -1,0 +1,25 @@
+.discription-title {
+  display: flex;
+  justify-content:space-between;
+  width: 250px;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.discription-table-title {
+  margin-top: 1.25rem;
+  margin-bottom: .3rem;
+  font-size: 1.125rem;
+}
+
+.discription-table {
+  max-width: 300px;
+  thead {
+    background: black;
+    tr th {
+        color: white;
+        font-weight: bold;
+      }
+    }
+  }
+

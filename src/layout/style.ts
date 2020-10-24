@@ -5,7 +5,7 @@ const drawerWidth = 240;
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     drawerRoot: {
-      display: 'flex',
+      // display: 'flex',
     },
     drawer: {
       [theme.breakpoints.up('sm')]: {
@@ -41,6 +41,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     content: {
       flexGrow: 1,
       padding: theme.spacing(3),
+      marginLeft: drawerWidth,
     },
     listRoot: {
       width: '100%',

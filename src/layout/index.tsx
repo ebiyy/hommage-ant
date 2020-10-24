@@ -1,14 +1,15 @@
 import React from 'react';
-
-import Typography from '@material-ui/core/Typography';
-
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import { useStyles } from './style';
 
 import Header from './header/header.component';
 import DrawerDispSwitch from './drawer/drawer-disp-switch';
 
 import './index.scss';
-import MaterialHeader from './material-header/material-header';
+import MaterialHeader, {
+  MATERIAL_DATA,
+} from './material-header/material-header';
+import ItemDescription from './item-description/item-description';
 
 export default function ResponsiveDrawer() {
   const classes = useStyles();
@@ -28,11 +29,17 @@ export default function ResponsiveDrawer() {
       />
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        <MaterialHeader />
-        <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </Typography>
+        {/* <MaterialHeader /> */}
+        <BrowserRouter>
+          <MaterialHeader />
+          <Switch>
+            {MATERIAL_DATA.map((data, index) => (
+              <Route path={`/${data.materialName.toLowerCase()}`} key={index}>
+                <ItemDescription materialName={data.materialName} />
+              </Route>
+            ))}
+          </Switch>
+        </BrowserRouter>
       </main>
     </div>
   );
