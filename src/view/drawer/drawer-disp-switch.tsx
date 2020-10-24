@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { Drawer, Hidden, useTheme } from '@material-ui/core';
-import { useStyles } from '../../layout/style';
-import DrawerList from '../../layout/drawer-layout';
+import DrawerList from '@/layout/drawer-layout';
+import { useStyles } from '@/layout/style';
 
 type Props = {
   mobileOpen: boolean;

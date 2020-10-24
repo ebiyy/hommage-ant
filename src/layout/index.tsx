@@ -1,13 +1,12 @@
 import React from 'react';
 import { useStyles } from './style';
 
-import Header from '../view/header/header.component';
-import DrawerDispSwitch from '../view/drawer/drawer-disp-switch';
-
 import './index.scss';
-import MaterialHeader from '../view/material-header/material-header';
-import SettingRouting from '../routes/setting-routes';
-import ItemDescriptionRouting from '../routes/item-description-routes';
+import Header from '@/view/header/header.component';
+import ItemDescriptionRouting from '@/routes/item-description-routes';
+import SettingRouting from '@/routes/setting-routes';
+import DrawerDispSwitch from '@/view/drawer/drawer-disp-switch';
+import MaterialHeader from '@/view/material-header/material-header';
 
 const Layout: React.FC = () => {
   const classes = useStyles();

@@ -9,11 +9,11 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import { ImLab } from 'react-icons/im';
 
 import { makeStyles, Theme, createStyles } from '@material-ui/core';
-import BulkPurchase from '../../components/bulk-purchase';
 
 import './header.component.scss';
 import { Link } from 'react-router-dom';
-import { ROUTING_PATH } from '../../routes/routes';
+import BulkPurchase from '@/components/bulk-purchase';
+import { ROUTING_PATH } from '@/routes/routes';
 
 const drawerWidth = 240;
 

@@ -1,9 +1,9 @@
+import IncrementItemList from '@/view/drawer/increment-item-list';
+import SettingItemList from '@/view/drawer/setting-item-list';
 import React from 'react';
 
 import { Switch, Route } from 'react-router-dom';
 import { ROUTING_PATH } from './routes';
-import IncrementItemList from '../view/drawer/increment-item-list';
-import SettingItemList from '../view/drawer/setting-item-list';
 
 const DrawerRouting: React.FC = () => {
   return (

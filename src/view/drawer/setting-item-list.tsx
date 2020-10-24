@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 import SaveIcon from '@material-ui/icons/Save';
 import AspectRatioIcon from '@material-ui/icons/AspectRatio';
 import ReceiptIcon from '@material-ui/icons/Receipt';
-import { ROUTING_PATH } from '../../routes/routes';
+import { ROUTING_PATH } from '@/routes/routes';
 
 const SettingItemList: React.FC = () => {
   const classes = useStyles();

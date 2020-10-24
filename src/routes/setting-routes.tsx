@@ -1,8 +1,8 @@
+import SettingCredit from '@/view/contents/setting/setting-credit';
+import SettingSave from '@/view/contents/setting/setting-save';
+import SettingUI from '@/view/contents/setting/setting-ui';
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import SettingSave from '../view/contents/setting/setting-save';
-import SettingUI from '../view/contents/setting/setting-ui';
-import SettingCredit from '../view/contents/setting/setting-credit';
 import { ROUTING_PATH } from './routes';
 
 const SettingRouting: React.FC = () => {
