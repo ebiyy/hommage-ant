@@ -22,12 +22,11 @@ const SettingItemList: React.FC = () => {
     <List
       component="nav"
       aria-labelledby="nested-list-subheader"
-      subheader={
-        <ListSubheader component="div" id="nested-list-subheader">
-          Setting Item List
-        </ListSubheader>
-      }
-      className={classes.listRoot}
+      // subheader={
+      //   <ListSubheader component="div" id="nested-list-subheader">
+      //     Setting Item List
+      //   </ListSubheader>
+      // }
     >
       <Link to={ROUTING_PATH.save}>
         <ListItem button>

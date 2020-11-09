@@ -1,0 +1,41 @@
+.increment-contents {
+  display: flex;
+  .contents-left, .contents-right {
+    flex:1;
+
+  }
+  .MuiCard-root {
+    padding-bottom: .4em;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    box-shadow: 1px 1px 3px;
+    background: white;
+    .MuiCardContent-root {
+      padding-bottom: 3px;
+      h2 {
+        margin-bottom: .5rem;
+      }
+    }
+
+  }
+  .MuiButtonGroup-root {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+    button.MuiButton-outlinedPrimary {
+      color: #007cbb;
+      border: 1px solid #0077b7;
+      display: flex;
+      width: 100%;
+    }
+  }
+}
+
+.discription-title {
+  display: flex;
+  justify-content:space-between;
+  width: 220px;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}

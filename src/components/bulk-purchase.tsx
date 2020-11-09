@@ -70,6 +70,7 @@ const BulkPurchase: React.FC = () => {
         onClose={() => setMenuPosition(null)}
         anchorReference="anchorPosition"
         anchorPosition={menuPosition}
+        style={{ zIndex: 9999999999999999 }}
       >
         <MenuItem onClick={handleItemClick}>All 100%</MenuItem>
         {PEARENT_MENU_ITEMS.map((listName, index) =>

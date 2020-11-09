@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Drawer, Hidden, useTheme } from '@material-ui/core';
+import { Drawer, Hidden, Toolbar, useTheme } from '@material-ui/core';
 import DrawerList from '@/layout/drawer-layout';
 import { useStyles } from '@/layout/style';
 

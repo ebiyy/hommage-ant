@@ -7,6 +7,9 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import PauseIcon from '@material-ui/icons/Pause';
 import SettingsIcon from '@material-ui/icons/Settings';
 import { ImLab } from 'react-icons/im';
+import LanguageIcon from '@material-ui/icons/Language';
+import HomeIcon from '@material-ui/icons/Home';
+import ReceiptIcon from '@material-ui/icons/Receipt';
 
 import { makeStyles, Theme, createStyles } from '@material-ui/core';
 
@@ -14,8 +17,9 @@ import './header.component.scss';
 import { Link } from 'react-router-dom';
 import BulkPurchase from '@/components/bulk-purchase';
 import { ROUTING_PATH } from '@/routes/routes';
+import MaterialHeader from '../material-header/material-header';
 
-const drawerWidth = 240;
+const drawerWidth = 340;
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -23,10 +27,10 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
     },
     appBar: {
-      [theme.breakpoints.up('sm')]: {
-        width: `calc(100% - ${drawerWidth}px)`,
-        marginLeft: drawerWidth,
-      },
+      // [theme.breakpoints.up('sm')]: {
+      //   width: `calc(100% - ${drawerWidth}px)`,
+      //   marginLeft: drawerWidth,
+      // },
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -96,6 +100,15 @@ const Header: React.FC<Props> = props => {
           >
             <ImLab />
           </IconButton>
+          <IconButton aria-label="pause button" color="inherit">
+            <LanguageIcon />
+          </IconButton>
+          <IconButton aria-label="pause button" color="inherit">
+            <ReceiptIcon />
+          </IconButton>
+          <IconButton aria-label="pause button" color="inherit">
+            <HomeIcon />
+          </IconButton>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <form noValidate autoComplete="off">
@@ -136,6 +149,7 @@ const Header: React.FC<Props> = props => {
             </IconButton>
           </div>
         </Toolbar>
+        <MaterialHeader />
       </AppBar>
     </div>
   );

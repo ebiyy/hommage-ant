@@ -1,6 +1,6 @@
 import { makeStyles, Theme, createStyles } from '@material-ui/core';
 
-const drawerWidth = 240;
+const drawerWidth = 400;
 
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -15,8 +15,8 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     appBar: {
       [theme.breakpoints.up('sm')]: {
-        width: `calc(100% - ${drawerWidth}px)`,
-        marginLeft: drawerWidth,
+        // width: `calc(100% - ${drawerWidth}px)`,
+        // marginLeft: drawerWidth,
       },
     },
     menuButton: {
@@ -46,8 +46,9 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     listRoot: {
       width: '100%',
-      maxWidth: 360,
+      maxWidth: drawerWidth,
       backgroundColor: theme.palette.background.paper,
+      overflow: 'auto',
     },
     nested: {
       paddingLeft: `${theme.spacing(4)}px !important`,

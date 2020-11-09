@@ -3,3 +3,31 @@ a {
   cursor: pointer;
   text-decoration: none;
 }
+
+html {
+  height: 100%; 
+  body {
+    height: 100%; 
+    #root {
+      height: 100%; 
+      background: #fafafa;
+      .MuiDrawer-root .MuiPaper-root {
+        background: #eee;
+        nav {
+          background: #eee;
+        }
+      }
+      .makeStyles-drawerRoot-1 {
+        header {
+          background: #004a70;
+          z-index: 99999999999;
+
+        }
+        main {
+          height: 100%; 
+        }
+      }
+    }
+  }
+}
+

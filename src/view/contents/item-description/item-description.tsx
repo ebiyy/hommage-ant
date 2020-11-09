@@ -58,9 +58,19 @@ const ItemDescription: React.FC<Props> = props => {
 
   useEffect(() => {
     console.log(props.materialName);
-    setDescriptionData(
-      MOCKS.filter(data => props.materialName === data.materialName)[0],
-    );
+    const pickUpData = MOCKS.filter(
+      data => props.materialName === data.materialName,
+    )[0];
+    if (pickUpData) {
+      setDescriptionData(pickUpData);
+    } else {
+      setDescriptionData({
+        materialName: props.materialName,
+        possessionNumber: '20Qa',
+        possessionNumberPerSec: '923B/s',
+        description: 'Food is used to support almost all your units.',
+      });
+    }
   }, [props.materialName]);
 
   return (

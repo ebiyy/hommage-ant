@@ -1,0 +1,28 @@
+.MuiListItemIcon-root svg {
+  font-size: 1.5rem;
+
+}
+
+.MuiListItem-root {
+  padding-left: 2rem !important;
+  .MuiSvgIcon-root {
+    position: absolute;
+    left: 5px;
+  }
+  .MuiListItemText-root:nth-child(2) {
+    width: 220px;
+  }
+  .MuiListItemText-root:nth-child(3) {
+    width: 140px;
+  }
+  .MuiListItemText-root:nth-child(4) {
+    width: 80px;
+  }
+}
+
+.MuiListItemIcon-root {
+  min-width: 40px !important;
+  .MuiSvgIcon-root {
+    position: inherit;
+  }
+}

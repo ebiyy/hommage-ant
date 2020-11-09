@@ -5,12 +5,13 @@
 }
 
 .discription-table {
-  max-width: 300px;
+  max-width: 92%;
   thead {
     background: black;
     tr th {
         color: white;
         font-weight: bold;
+        padding: 10px;
       }
     }
   }

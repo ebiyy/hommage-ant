@@ -1,0 +1,22 @@
+// // const [descriptionData, setDescriptionData] = useRecoilState(
+// //   ATOM_BRIDGE[props.materialName.toLocaleLowerCase()],
+// // );
+
+// useEffect(() => {
+//   let costStateObj: { [key: string]: RecoilValueReadOnly<number> } = {};
+//   const costTargetArr = Object.keys(props.cost);
+//   costTargetArr.forEach(costTarget => {
+//     const costState = selector({
+//       key: `costState${costTarget}`, // unique ID (with respect to other atoms/selectors)
+//       get: ({ get }) => {
+//         const unitState = get(ATOM_BRIDGE[costTarget]);
+//         return unitState.possessionNumber;
+//       },
+//     });
+//     costStateObj[costTarget] = costState;
+//   });
+// }, [props.cost]);
+
+// // const count = useRecoilValue(costStateObj['food']);
+
+// // console.log(count);

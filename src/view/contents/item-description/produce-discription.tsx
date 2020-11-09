@@ -54,9 +54,7 @@ const ProduceDescription: React.FC = () => {
           <TableBody>
             {rows.map((row, index) => (
               <TableRow key={index}>
-                <TableCell component="th" scope="row" align="center">
-                  {row.product}
-                </TableCell>
+                <TableCell align="center">{row.product}</TableCell>
                 <TableCell align="center">{row.one}</TableCell>
                 <TableCell align="center">{row.all}</TableCell>
               </TableRow>

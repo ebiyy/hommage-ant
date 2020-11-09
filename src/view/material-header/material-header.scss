@@ -1,10 +1,7 @@
 .material-header {
   display: flex;
-  margin-left: -24px;
-  margin-top: -24px;
   background: white;
-  width: calc(100% + 24px * 2);
-  margin-bottom: 30px;
+  font-size: 1rem;
   .material-item {
     width: 100%;
     padding: 5px;
@@ -23,4 +20,5 @@
       margin-top: 3px;
     }
   }
+
 }

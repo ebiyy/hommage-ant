@@ -1,5 +1,7 @@
-import React from 'react';
+import { MATERIAL_ITEM_LIST } from '@/helpers/constants/increment-item-list';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import MaterialHeaderItem from './material-header-item';
 import './material-header.scss';
 
 export interface MaterialData {
@@ -8,54 +10,28 @@ export interface MaterialData {
   possessionNumberPerSec: string;
 }
 
-export const MATERIAL_DATA = [
-  {
-    materialName: 'Food',
-    possessionNumber: '20Qa',
-    possessionNumberPerSec: '923B/s',
-  },
-  {
-    materialName: 'Crystal',
-    possessionNumber: '50.7M',
-    possessionNumberPerSec: '989/s',
-  },
-  {
-    materialName: 'Soil',
-    possessionNumber: '380M',
-    possessionNumberPerSec: '6.341/s',
-  },
-  {
-    materialName: 'Science',
-    possessionNumber: '196M',
-    possessionNumberPerSec: '2.714/s',
-  },
-  {
-    materialName: 'Fungus',
-    possessionNumber: '12.1M',
-    possessionNumberPerSec: '233/s',
-  },
-  {
-    materialName: 'Wood',
-    possessionNumber: '12.7M',
-    possessionNumberPerSec: '197/s',
-  },
-];
-
 const MaterialHeader: React.FC = () => {
   return (
     <div className="material-header">
-      {MATERIAL_DATA.map((data, index) => (
-        <Link
-          to={`/${data.materialName.toLowerCase()}`}
-          className="material-item"
-          key={index}
-        >
-          <div>{data.materialName}</div>
-          <div className="material-item-value">
-            <div>{data.possessionNumber}</div>
-            <div>{data.possessionNumberPerSec}</div>
-          </div>
-        </Link>
+      {Object.keys(MATERIAL_ITEM_LIST).map((itemKey: any, index) => (
+        <Fragment key={index}>
+          {MATERIAL_ITEM_LIST[itemKey].defaultQuantity !== undefined ? (
+            <Link
+              to={`/${MATERIAL_ITEM_LIST[itemKey].link}`}
+              className="material-item"
+              key={index}
+            >
+              <div>{MATERIAL_ITEM_LIST[itemKey].displayName}</div>
+              <div className="material-item-value">
+                <MaterialHeaderItem
+                  materialName={MATERIAL_ITEM_LIST[itemKey].displayName}
+                />
+              </div>
+            </Link>
+          ) : (
+            <Link to="/" key={index} className="material-item blank"></Link>
+          )}
+        </Fragment>
       ))}
     </div>
   );
